@@ -1,9 +1,17 @@
+.body {
+    background-color: #fff;
+    color: #000;
+    font-style: "Raleway" sans-serif;
+}
+
+
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     padding: 90px 50px;
     width: 1100px;
+    height: 293px;
     gap: 2px 1px;
 }
 
@@ -22,19 +30,14 @@
 }    
 
 .header__links-list-item {
-    list-style: circle;
-    font-size: 18px;
+    /* list-style: circle;
+    font-size: 18px; */
 }
 
 .header__links-list-item_no-bullit {
     list-style: none;
 
-    text-decoration: none;
 }
-  
-.header__links-list-item_no-active {
-    text-decoration: none;
-}  
   
 .header__logo-image {
     display: block;
@@ -58,20 +61,21 @@
     padding-right: 37px;
 }
 
-.header__address a {
+.address__item {
     border-bottom: 1px solid;
     text-decoration: none;
 }
 
 .cover {
-
-    background-image: url(/images/cover.jpg);
-    min-height: 750px;
+    background-image: url(../images/cover.jpg);
+    min-height: 757px;
     position: relative;
     padding: 165px 50px 50px;
     background-position: center;
     background-size: cover;
     z-index: 0;
+
+    width: 1100px;
 }
 
 .overlay {
@@ -84,52 +88,58 @@
 .cover__title {
     position: relative;
     z-index: 2;
-    margin-bottom: 160px;
+    margin-bottom: 95px;
     color: #fff;
     font-size: 100px;
-    line-height: 1.15;
-    letter-spacing: 0.3em;
     text-transform: uppercase;
     font-family: Raleway, sans-serif; /*добавил без засечек*/
-    font-style: normal;
+    font-style:normal;
 
-    padding-left: 4px;
-
+    padding-left: 10px;
 }
 
 .letter-spacing-extended {
     display: block;
-    letter-spacing: 26px;
-    display: block;
+    letter-spacing: 30px;
     margin-top: 30px;
     line-height: 1;
 
     padding-top: 1px;
     padding-bottom: 1px;
+}
 
+.aligned-text_left {
+    position: relative;
+    top: -20px;
+    left: -9px;
 }
 
 .aligned-text_center {
     text-align: center;
-
-    display: block;
-    margin-right: -0.1em; 
+    position: relative;
+    top: -17px;
+    left: 11px;
 }
 
 .aligned-text_right {
     text-align: right;
+    position: relative;
 
-    display: block;
-    margin-right: -0.1em; 
+    left: 31px;
+    top: -14px;
+
+    /* display: block; */
+    /* margin-right: -0.2em;  */
 }
 
 .cover__description {
     display: flex;
     position: relative;
     z-index: 1;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     align-items: center;
     gap: 78px;
+    left: 2px;        
 }
 
 .cover__description-text {
@@ -148,11 +158,13 @@
     text-transform: uppercase;
     background-color: transparent;
     font-family: Raleway, sans-serif;
+    position: relative;
+    left: 30px;
 
 }
 
 .lots {
-    padding: 180px 24px 0;
+    padding: 180px 24px 0;              
 }
 
 .lots__heading {
@@ -205,17 +217,17 @@
     z-index: 1;
     font-size: 20px;
 }
-
+/* относительные пути до файлов исправлены */
 .card__type__film {
-    background-image: url(/images/card-lot-01.jpg)
+    background-image: url(../images/card-lot-01.jpg)
 }
 
 .card__type__book {
-    background-image: url(/images/card-lot-02.jpg)
+    background-image: url(../images/card-lot-02.jpg)
 }
 
 .card__type__picture {
-    background-image: url(/images/card-lot-03.jpg)
+    background-image: url(../images/card-lot-03.jpg)
 }
 
 .lots__look-more-link {
@@ -233,13 +245,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    gap: 25px;
-    padding: 133px 24px;
+    gap: 27px;     
+    padding: 157px 28px ;     
 }
 
 .about__column_text {
     grid-column: span 2;
 }
+
 
 .about__logo {
     display: flex;
@@ -265,7 +278,7 @@
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 44px;      /*24*/
     font-size: 20px;
 }
 
@@ -273,6 +286,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 50px 90px;
+
+    margin-top: 10px;
+    padding-bottom: 8px;   /*82*/
 }
 
 .footer_links-list {
@@ -305,14 +321,24 @@
     line-height: 1.35;
 }
 
-.address a {
+/* .address a { адрес смог совместить только эти 2 стиля, 
+так как в шапке с правой стороны,а в подвале с левой стороны,и перенос цыфр так же, либо я уже не знаю как это сделать)
     border-bottom: 1px solid;
     text-decoration: none;
-}
+} */
 
-.footer_link-active {
+
+/*ссылке главная в шапке и подвале создал один стиль */
+.link-active {
+    text-decoration: none;
     border-bottom: none;
 }
 
+
+
 /* Не судите строго......косяков много,все постепенно))
 хорошего утра,дня,вечера */
+
+/*уже почти сломался))) Никита при всем уважении к тебе, сделал 
+все возможное, в лотах не пойму как ровный отступ параграфа сделать, 
+а так по макету все почти сходится, но не идеально конечно*/
