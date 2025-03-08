@@ -1,7 +1,7 @@
 .body {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000;
-    font-style: "Raleway" sans-serif;
+    font-style: "Raleway",sans-serif;
 }
 
 
@@ -9,10 +9,8 @@
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 90px 50px;
-    width: 1100px;
-    height: 293px;
-    gap: 2px 1px;
+    padding: 92px 50px 96px 50px;
+    
 }
 
 .header__menu {
@@ -27,12 +25,8 @@
     column-gap: 33px;
     margin-right: 36px;
     list-style: circle;
+    padding-bottom: 10px;
 }    
-
-.header__links-list-item {
-    /* list-style: circle;
-    font-size: 18px; */
-}
 
 .header__links-list-item_no-bullit {
     list-style: none;
@@ -43,8 +37,8 @@
     display: block;
     align-content: start;
 }
-   
-    
+
+
 .header__logo {
     display: block;
     width: 137px;
@@ -53,93 +47,89 @@
 }
 
 .header__address { 
-    max-width: 260px;
-    font-size: 18px;
     justify-self: end;
-    font-style: normal;
-    line-height: 1.35;
-    padding-right: 37px;
+    padding-right: 36px;
+    padding-bottom: 4px;
 }
 
+.address {
+    /* justify-self: start; */
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.35;
+}
 .address__item {
     border-bottom: 1px solid;
     text-decoration: none;
 }
 
 .cover {
-    background-image: url(../images/cover.jpg);
-    min-height: 757px;
-    position: relative;
-    padding: 165px 50px 50px;
+     background-image: url(../images/cover.jpg);
+     min-width: 100%;
+     position: relative;
+     padding: 165px 50px 50px;
+     text-transform: uppercase;
     background-position: center;
     background-size: cover;
-    z-index: 0;
-
-    width: 1100px;
+    background-repeat: no-repeat;
+    /* z-index: 0; */
 }
 
 .overlay {
     position: absolute;
     inset: 0;
     background-color: rgb(0 0 0/0.6);
-    height: 100%;
 }
 
 .cover__title {
     position: relative;
-    z-index: 2;
-    margin-bottom: 95px;
+    z-index: 1;
     color: #fff;
     font-size: 100px;
     text-transform: uppercase;
-    font-family: Raleway, sans-serif; /*добавил без засечек*/
+    font-family: "Raleway", sans-serif; /*добавил без засечек*/
     font-style:normal;
-
-    padding-left: 10px;
+    /* padding-left: 10px; */
+    line-height: 1.15;
+    font-weight: 700;
 }
 
 .letter-spacing-extended {
     display: block;
-    letter-spacing: 30px;
-    margin-top: 30px;
-    line-height: 1;
+    line-height: 1.4;
 
-    padding-top: 1px;
-    padding-bottom: 1px;
+    letter-spacing: 0.3em;
 }
 
 .aligned-text_left {
-    position: relative;
-    top: -20px;
-    left: -9px;
+    text-align: left;
+    margin-bottom: -10px;
 }
 
 .aligned-text_center {
     text-align: center;
-    position: relative;
-    top: -17px;
-    left: 11px;
+    margin-left: 30px;
+    margin-top: -20px;
+    /* position: relative; */
+    /* top: -17px;
+    left: 11px; */
 }
 
 .aligned-text_right {
     text-align: right;
-    position: relative;
+    margin-right: -29px;
 
-    left: 31px;
-    top: -14px;
-
-    /* display: block; */
-    /* margin-right: -0.2em;  */
 }
 
 .cover__description {
     display: flex;
-    position: relative;
     z-index: 1;
-    /* justify-content: flex-end; */
     align-items: center;
-    gap: 78px;
-    left: 2px;        
+    padding: 84px 0 0 ;
+    position: relative;
+    /* font-size: 22px; */
+    /* gap: 78px;
+    left: 2px;         */
 }
 
 .cover__description-text {
@@ -160,11 +150,12 @@
     font-family: Raleway, sans-serif;
     position: relative;
     left: 30px;
+    margin-left: 80px;
 
 }
 
 .lots {
-    padding: 180px 24px 0;              
+    margin: 180px 24px 120px;              
 }
 
 .lots__heading {
@@ -232,7 +223,7 @@
 
 .lots__look-more-link {
     color: #000;
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 20px;
     display: inline-block;
     margin-top: 30px;
@@ -244,9 +235,9 @@
 .about {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 27px;     
-    padding: 157px 28px ;     
+    /* gap: 27px;          */
+    /* margin-bottom: 156px; */
+    margin: 155px 2px 190px 30px;
 }
 
 .about__column_text {
@@ -260,35 +251,38 @@
     align-items: center;
     width: 240px;
     height: 240px;
-    margin: auto;
+    margin-left: 47px;
     border-radius: 50%;
     background-color: #000;
 }
 
 .about__logo-image {
     width: 148px;
+    height: 114px;
 }
 
 .about__title {
-    margin: 100px 0;
+    margin: 102px 2px;
     font-size: 40px;
     text-transform: uppercase;
+
+    font-weight: 700;
 }
 
 .about__text {
     display: flex;
     flex-direction: column;
-    gap: 44px;      /*24*/
+    gap: 25px;     
     font-size: 20px;
+    padding-bottom: 24px;
 }
 
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 50px 90px;
+    padding: 0 50px 80px;
+    
 
-    margin-top: 10px;
-    padding-bottom: 8px;   /*82*/
 }
 
 .footer_links-list {
@@ -314,12 +308,6 @@
     height: 48px;
 }
   
-.address {
-    justify-self: start;
-    font-size: 18px;
-    font-style: normal;
-    line-height: 1.35;
-}
 
 /* .address a { адрес смог совместить только эти 2 стиля, 
 так как в шапке с правой стороны,а в подвале с левой стороны,и перенос цыфр так же, либо я уже не знаю как это сделать)
